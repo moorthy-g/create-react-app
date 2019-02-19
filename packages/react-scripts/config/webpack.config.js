@@ -464,7 +464,8 @@ module.exports = function(webpackEnv) {
                   ? shouldUseSourceMap
                   : isEnvDevelopment,
                 modules: true,
-                getLocalIdent: getCSSModuleLocalIdent,
+                getLocalIdent: !isEnvProduction && getCSSModuleLocalIdent,
+                localIdentName: isEnvProduction && '[hash:base64:5]',
               }),
             },
             // Opt-in support for SASS (using .scss or .sass extensions).
@@ -499,7 +500,8 @@ module.exports = function(webpackEnv) {
                     ? shouldUseSourceMap
                     : isEnvDevelopment,
                   modules: true,
-                  getLocalIdent: getCSSModuleLocalIdent,
+                  getLocalIdent: !isEnvProduction && getCSSModuleLocalIdent,
+                  localIdentName: isEnvProduction && '[hash:base64:5]',
                 },
                 'sass-loader'
               ),
