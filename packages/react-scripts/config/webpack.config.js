@@ -288,7 +288,9 @@ module.exports = function(webpackEnv) {
         // Make sure your source files are compiled, as they will not be processed in any way.
         new ModuleScopePlugin(paths.appSrc, [paths.appPackageJson]),
         //Use file with same directory name as entry file insteadof index.js
-        new DirectoryNamedWebpackPlugin(),
+        new DirectoryNamedWebpackPlugin({
+          honorIndex: true,
+        }),
       ],
     },
     resolveLoader: {
