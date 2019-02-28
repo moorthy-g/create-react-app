@@ -1,5 +1,7 @@
 # Create React App [![Build Status](https://travis-ci.org/facebook/create-react-app.svg?branch=master)](https://travis-ci.org/facebook/create-react-app) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/facebook/create-react-app/pulls)
 
+[**NOTE:** Checkout the modifications README for differences to facebook's react-scripts.](packages/react-scripts/README.md)
+
 Create React apps with no build configuration.
 
 - [Creating an App](#creating-an-app) – How to create a new app.
