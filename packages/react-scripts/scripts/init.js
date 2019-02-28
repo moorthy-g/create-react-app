@@ -97,6 +97,7 @@ module.exports = function(
   appPackage.scripts = {
     start: 'react-scripts start',
     build: 'react-scripts build',
+    analyze: 'cross-env REACT_SCRIPTS_ANALYZE=true react-scripts build',
     test: 'react-scripts test',
     eject: 'react-scripts eject',
   };
@@ -228,6 +229,11 @@ module.exports = function(
     chalk.cyan(`  ${displayedCommand} ${useYarn ? '' : 'run '}build`)
   );
   console.log('    Bundles the app into static files for production.');
+  console.log();
+  console.log(
+    chalk.cyan(`  ${displayedCommand} ${useYarn ? '' : 'run '}analyze`)
+  );
+  console.log('    Opens the app bundle report.');
   console.log();
   console.log(chalk.cyan(`  ${displayedCommand} test`));
   console.log('    Starts the test runner.');

@@ -23,3 +23,5 @@ npm start
 - Shorter css modules classname in build
 - No default sourcemap generation in build
 - Include .editorconfig
+- babel.config.js support for additional babel configuration
+- Bundle reporting with "webpack-bundle-analyzer" plugin
