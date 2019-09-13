@@ -18,6 +18,7 @@ npm start
 
 **Note:** Currently, These modifications are concerned only for javascript not typescript
 
+- LESS replaces SASS
 - Directory structure update
 - Doesn't open browser when 'start' script run
 - Use [directory-named-webpack-plugin](https://github.com/shaketbaby/directory-named-webpack-plugin)
