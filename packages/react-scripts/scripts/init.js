@@ -110,6 +110,21 @@ module.exports = function(
   // Setup the browsers list
   appPackage.browserslist = defaultBrowsers;
 
+  // Commitizen & Commitlint
+  appPackage.config = {
+    commitizen: {
+      path: 'cz-conventional-changelog',
+    },
+  };
+  appPackage.commitlint = {
+    extends: ['@commitlint/config-conventional'],
+  };
+  appPackage.husky = {
+    hooks: {
+      'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
+    },
+  };
+
   fs.writeFileSync(
     path.join(appPath, 'package.json'),
     JSON.stringify(appPackage, null, 2) + os.EOL
@@ -165,6 +180,7 @@ module.exports = function(
     command = 'npm';
     args = ['install', '--save', verbose && '--verbose'].filter(e => e);
   }
+
   args.push('react', 'react-dom');
 
   // Install additional template dependencies, if present
@@ -172,6 +188,7 @@ module.exports = function(
     appPath,
     '.template.dependencies.json'
   );
+
   if (fs.existsSync(templateDependenciesPath)) {
     const templateDependencies = require(templateDependenciesPath).dependencies;
     args = args.concat(
@@ -204,6 +221,17 @@ module.exports = function(
     console.log();
     console.log('Initialized a git repository.');
   }
+
+  // Install husky after git initialization
+  if (useYarn) {
+    spawn.sync('yarn', ['add', 'husky'], { stdio: 'inherit' });
+  } else {
+    spawn.sync('npm', ['install', 'husky', '--save'], { stdio: 'inherit' });
+  }
+  // Amend changes to initial commit
+  spawn.sync('git', ['commit', '-anqC', 'HEAD', '--amend'], {
+    stdio: 'inherit',
+  });
 
   // Display the most elegant way to cd.
   // This needs to handle an undefined originalDirectory for

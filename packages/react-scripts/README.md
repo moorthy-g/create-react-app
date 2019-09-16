@@ -21,6 +21,7 @@ npm start
 - LESS replaces SASS
 - Directory structure update
 - Doesn't open browser when 'start' script run
+- Enforce [angular conventional commit](https://github.com/conventional-changelog/commitlint) standards (Use commitlint, commitizen & husky).
 - Use [directory-named-webpack-plugin](https://github.com/shaketbaby/directory-named-webpack-plugin)
 - Shorter css modules classname in build
 - No default sourcemap generation in build

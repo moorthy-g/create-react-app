@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Important Notes (for @moorthy-g/react-scripts)
+
+- Install commitizen globally `npm install -g commitizen`
+- Then, use `git cz` to commit changes
+- Commit messages must follow [angular conventional commit
+  standards](https://github.com/conventional-changelog/commitlint)
+
 ## App directory structure instructions
 
 - `src/containers` directory holds composed components.\
