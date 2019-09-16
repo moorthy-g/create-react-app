@@ -22,6 +22,7 @@ npm start
 - Directory structure update
 - Doesn't open browser when 'start' script run
 - Enforce [angular conventional commit](https://github.com/conventional-changelog/commitlint) standards (Use commitlint, commitizen & husky).
+- Format staged files in pre-commit hook with prettier & pretty-quick.
 - Use [directory-named-webpack-plugin](https://github.com/shaketbaby/directory-named-webpack-plugin)
 - Shorter css modules classname in build
 - No default sourcemap generation in build

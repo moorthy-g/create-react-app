@@ -1,15 +1,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Important Notes (for @moorthy-g/react-scripts)
+## Important Notes (@moorthy-g/react-scripts version)
 
 - Install commitizen globally `npm install -g commitizen`
 - Then, use `git cz` to commit changes
 - Commit messages must follow [angular conventional commit
   standards](https://github.com/conventional-changelog/commitlint)
+- Install prettier extension in editor. Enable "Format on save" option.
+- Install editorconfig extension in editor.
+- All files will be formated using prettier before commit
 
-## App directory structure instructions
+## App directory structure instructions (@moorthy-g/react-scripts version)
 
-- `src/containers` directory holds composed components.\
+- `src/containers` directory holds composed components.  
    Usually, route's components & complex components made off multiple components.
 - `src/components` directory holds reusable components.
 
