@@ -27,7 +27,6 @@ const WorkboxWebpackPlugin = require('workbox-webpack-plugin');
 const WatchMissingNodeModulesPlugin = require('react-dev-utils/WatchMissingNodeModulesPlugin');
 const ModuleScopePlugin = require('react-dev-utils/ModuleScopePlugin');
 const DirectoryNamedWebpackPlugin = require('directory-named-webpack-plugin');
-const getCSSModuleLocalIdent = require('react-dev-utils/getCSSModuleLocalIdent');
 const paths = require('./paths');
 const modules = require('./modules');
 const getClientEnvironment = require('./env');
@@ -528,8 +527,9 @@ module.exports = function(webpackEnv) {
                 importLoaders: 1,
                 sourceMap: isEnvProduction && shouldUseSourceMap,
                 modules: true,
-                getLocalIdent: !isEnvProduction && getCSSModuleLocalIdent,
-                localIdentName: isEnvProduction && '[hash:base64:5]',
+                localIdentName: isEnvProduction
+                  ? '[hash:base64:8]'
+                  : '[local]--[hash:base64:5]',
               }),
             },
             // Opt-in support for LESS (using .less extensions).
@@ -560,8 +560,9 @@ module.exports = function(webpackEnv) {
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: true,
-                  getLocalIdent: !isEnvProduction && getCSSModuleLocalIdent,
-                  localIdentName: isEnvProduction && '[hash:base64:5]',
+                  localIdentName: isEnvProduction
+                    ? '[hash:base64:8]'
+                    : '[local]--[hash:base64:5]',
                 },
                 'less-loader'
               ),
