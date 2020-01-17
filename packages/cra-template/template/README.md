@@ -1,5 +1,21 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Important Notes (@moorthy-g/react-scripts version)
+
+- Install commitizen globally `npm install -g commitizen`
+- Then, use `git cz` to commit changes
+- Commit messages must follow [angular conventional commit
+  standards](https://github.com/conventional-changelog/commitlint)
+- Install prettier extension in editor. Enable "Format on save" option.
+- Install editorconfig extension in editor.
+- All files will be formated using prettier before commit
+
+## App directory structure instructions (@moorthy-g/react-scripts version)
+
+- `src/containers` directory holds composed components.  
+   Usually, route's components & complex components made off multiple components.
+- `src/components` directory holds reusable components.
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -26,16 +42,6 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 

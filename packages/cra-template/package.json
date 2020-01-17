@@ -1,24 +1,21 @@
 {
-  "name": "cra-template",
+  "name": "@moorthy-g/cra-template",
   "version": "1.0.0",
   "keywords": [
     "react",
     "create-react-app",
     "template"
   ],
-  "description": "The base template for Create React App.",
+  "description": "The custom template for Create React App. That should be used with @moorthy-g/react-scripts",
   "main": "template.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
+    "url": "https://github.com/moorthy-g/create-react-app.git",
     "directory": "packages/cra-template"
   },
   "license": "MIT",
   "engines": {
     "node": ">=8"
-  },
-  "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
   },
   "files": [
     "template",
