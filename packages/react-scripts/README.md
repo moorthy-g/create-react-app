@@ -9,17 +9,14 @@ Please refer to its documentation:
 ## Installation
 
 ```sh
-npx create-react-app my-app --scripts-version @moorthy-g/react-scripts
-cd my-app
+npx create-react-app my-app --scripts-version @moorthy-g/react-scripts --template @moorthy-g/cra-template
 npm start
 ```
 
 ## What are the modifications?
 
-**Note:** Currently, These modifications are concerned only for javascript not typescript
-
 - LESS replaces SASS
-- Directory structure update
+- Directory structure update (@moorthy-g/cra-template)
 - Doesn't open browser when 'start' script run
 - Enforce [angular conventional commit](https://github.com/conventional-changelog/commitlint) standards (Use commitlint, commitizen & husky).
 - Format staged files in pre-commit hook with prettier & pretty-quick.
