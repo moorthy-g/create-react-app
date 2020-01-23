@@ -1,3 +1,7 @@
+# !!! Deprecated !!!
+
+This package is deprecated in favor of [@moorthy-g/cra-template](https://www.npmjs.com/package/@moorthy-g/cra-template)
+
 # @moorthy-g/react-scripts
 
 This package includes scripts and configuration used by [Create React App](https://github.com/facebook/create-react-app).<br>
